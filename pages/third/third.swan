@@ -1,0 +1,89 @@
+<!-- <view s-for="item in items" class="single-item" bind:tap="oneItemClick" bind:touchstart="oneItemTouchStart" bind:touchmove="oneItemTouchmove" bind:touchcancel="oneItemTouchcancel" bind:touchend="oneItemTouchEnd">
+	<image src="{{item.imgsrc}}" class="single-img"></image>
+	<view class="single-text-area">
+		<text class="single-title">
+			{{item.title}}
+		</text>
+		<view s-if="{{item.tags}}" class="tag-area">
+		<text s-for="tag in item.tags" class="{{tag.className}}">
+			{{tag.content}}
+		</text>
+		</view>
+	</view>
+</view>
+<view class="view-more" bind:tap="loadMore">
+	<text>点击加载更多</text>
+</view -->
+<view>
+	测试取值，从.js 文件中取值: {{ name }};
+
+	<view class="page-title">
+		<view class="page-title-line"></view>
+	</view>
+	<!-- 变量名 in  变量 才能取值  ，-->
+	<view s-for="p in person">
+		测试循环取值
+		{{p.age}}
+	</view>
+	<view class="page-title">
+		<view class="page-title-line"></view>
+	</view>
+	<!-- 判断 语句 -->
+	从js 中取值 判断变量is4G的值{{ is4G }}，<p>
+		从js 中取值 判断变量isWifi的值{{isWifi}}</p>
+	<view s-if="is4G">从js 中取值 判断变量is4G的值{{is4G}}</view>
+	<view s-elif="isWifi">从js 中取值 判断变量isWifi的值{{isWifi}}</view>
+	<view s-else>他们是其他值</view>
+
+
+	<!-- 绑定事件
+        touchstart	手指触摸开始
+        touchmove	手指触摸后进行移动  
+        touchend	手指触摸结束
+        touchcancel	手指触摸动作被打断，如来电提醒等
+        tap	手指触摸后马上离开动作
+     -->
+	<view class="page-title">
+		<view class="page-title-line"></view>
+	</view>
+	<view class="view-more" bind:tap="loadMore">
+		点击加载更多
+	</view>
+	<view class="page-title">
+		<view class="page-title-line"></view>
+	</view>
+
+	<!-- 测试绑定值 -->
+	<view data-swan="绑定值" bind:tap="viewtap">dataset-test</view>
+
+	<view class="page-title">
+		<view class="page-title-line"></view>
+	</view>
+
+
+	<button bind:tap="setName">点击变值</button>
+	<view>{{ me }}</view>
+
+	<view class="page-title">
+		<view class="page-title-line"></view>
+	</view>
+	<!-- 组件-->
+	<slider min="200" max="9500" value="{{switchDuration}}" bind:change="changeSlider"></slider>
+
+	<!-- API 
+    swan.showToast({
+	    title: '我是标题'
+    });
+    -->
+	<button class="start-fresh" bind:tap="startPullDownRefresh">点我开始刷新</button>
+	<button class="stop-fresh" bind:tap="stopPullDownRefresh">点我停止刷新</button>
+    <view class="page-title">
+		<view class="page-title-line"></view>
+	</view>
+
+    <!-- 点击弹框 -->
+     <view id="swanTap" data-say="hello" bind:tap="tapHandle"> 点击弹框 </view>
+    
+    <view class="swan-security-padding-bottom">test</view>
+
+</view>

@@ -1,0 +1,7 @@
+{
+  "navigationBarBackgroundColor": "#AEEEEE",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "我能覆盖全局中的app.json中的配置",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light"
+}

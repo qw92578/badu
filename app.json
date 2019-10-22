@@ -1,0 +1,58 @@
+{
+    "pages": [
+        "pages/third/third",
+        "pages/detail/detail",
+        "pages/index/index"
+        
+    ],
+    "window": {
+        "navigationBarBackgroundColor": "#ffffff",
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "长江众创百度小程序",
+        "backgroundTextStyle": "dark",
+        "enablePullDownRefresh": false,
+        "navigationStyle": "default"
+    },
+    "tabBar": {
+        "backgroundColor": "#000000",
+        "borderStyle": "white",
+        "color": "#ffffff",
+        "selectedColor": "#ffffff",
+        "list": [
+            
+            {
+                "pagePath": "pages/third/third",
+                "text": "第三页",
+                "iconPath": "pages/icon2.jpg",
+                "selectedIconPath": "pages/icon2.jpg"
+            },
+            {
+                "pagePath": "pages/detail/detail",
+                "text": "第二页",
+                "iconPath": "pages/icon2.jpg",
+                "selectedIconPath": "pages/icon2.jpg"
+            },
+            {
+                "pagePath": "pages/index/index",
+                "text": "第一页",
+                "iconPath": "pages/icon1.jpg",
+                "selectedIconPath": "pages/icon1.jpg"
+            }
+        ]
+    },
+    "prefetches": [
+       "https://m.baidu.com?id=${id2}"
+    ],
+    "networkTimeout": {
+        "request": 30000,
+        "connectSocket": 30000,
+        "uploadFile": 30000,
+        "downloadFile": 50000
+    },
+    "requiredBackgroundModes": [
+        "audio"
+    ]
+
+    
+    
+}
